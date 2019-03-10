@@ -1,2 +1,9 @@
 /.classpath
 /.project
+target/
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+.eclipse
