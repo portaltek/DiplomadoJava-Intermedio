@@ -16,8 +16,10 @@ public class MainClass {
 	public static void main(String... args) {
 
 		//b.execute(CopyOnWriteArraySet);
-
+		
 		removeBenchmark.executeAll();
+		
+		//System.out.println(1000_000/100);
 	}
 
 }
