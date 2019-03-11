@@ -36,6 +36,9 @@ public class BasicCollectionInterfaces {
 		doubleCollection.add((double) 10);
 		doubleCollection.add(11D);
 		doubleCollection.add(12.0);
+		
+		
+		
 
 		longMap.put(13L, "13 value");
 		longMap.put((long) 14, "14 value");
