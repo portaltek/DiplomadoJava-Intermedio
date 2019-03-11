@@ -2,6 +2,7 @@ package djava.collections.performance.benchmarks;
 
 import java.util.Collection;
 
+import djava.collections.performance.AbstractCollectionBenchmark;
 import djava.collections.performance.CollectionFactory;
 import djava.collections.performance.Collections;
 

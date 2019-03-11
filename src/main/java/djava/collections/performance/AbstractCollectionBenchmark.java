@@ -1,4 +1,4 @@
-package djava.collections.performance.benchmarks;
+package djava.collections.performance;
 
 import static djava.collections.performance.Collections.CopyOnWriteArrayList;
 import static djava.collections.performance.Collections.CopyOnWriteArraySet;

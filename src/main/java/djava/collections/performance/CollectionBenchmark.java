@@ -1,6 +1,4 @@
-package djava.collections.performance.benchmarks;
-
-import djava.collections.performance.Collections;
+package djava.collections.performance;
 
 public interface CollectionBenchmark {
 

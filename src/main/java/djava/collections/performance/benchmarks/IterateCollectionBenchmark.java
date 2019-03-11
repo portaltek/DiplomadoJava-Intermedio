@@ -4,7 +4,7 @@ import static djava.collections.performance.CollectionFactory.get;
 
 import java.util.Collection;
 import java.util.Iterator;
-
+import djava.collections.performance.AbstractCollectionBenchmark;
 import djava.collections.performance.Collections;
 
 public class IterateCollectionBenchmark extends AbstractCollectionBenchmark {
