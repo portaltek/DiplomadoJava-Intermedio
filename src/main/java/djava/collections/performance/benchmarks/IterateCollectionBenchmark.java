@@ -2,24 +2,23 @@ package djava.collections.performance.benchmarks;
 
 import static djava.collections.performance.CollectionFactory.get;
 
-import java.util.Collection;
 import java.util.Iterator;
+
 import djava.collections.performance.AbstractCollectionBenchmark;
-import djava.collections.performance.Collections;
+import djava.collections.performance.CollectionType;
 
 public class IterateCollectionBenchmark extends AbstractCollectionBenchmark {
 
-	public Long operation(Collections collectionType, int collectionSize) {
+	@Override
+	public void beforeOperation(CollectionType collectionType, int collectionSize) {
+		collection = get(collectionType, collectionSize);
+	}
 
-		Collection<Integer> collection = get(collectionType, collectionSize);
-		Long startTime = System.currentTimeMillis();
+	@Override
+	public void operation(CollectionType collectionType, int collectionSize) {
 		for (Iterator<Integer> iterator = collection.iterator(); iterator.hasNext();) {
-			Integer integer = (Integer) iterator.next();
-
+			Integer i = iterator.next();
 		}
-		Long endTime = System.currentTimeMillis();
-		return endTime - startTime;
-
 	}
 
 }

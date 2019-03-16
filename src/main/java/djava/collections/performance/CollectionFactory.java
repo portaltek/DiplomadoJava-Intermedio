@@ -18,7 +18,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 public class CollectionFactory {
 
-	public static Collection<Integer> get(Collections collectionType, int collectionSize) {
+	public static Collection<Integer> get(CollectionType collectionType, int collectionSize) {
 		Collection<Integer> collection = get(collectionType);
 		for (int i = 0; i < collectionSize; ++i) {
 			collection.add(i);
@@ -26,9 +26,23 @@ public class CollectionFactory {
 		return collection;
 	}
 
-	public static Collection<Integer> get(Collections collectionType) {
+	public static boolean skip(CollectionType collectionType) {
 		switch (collectionType) {
-		
+		case CopyOnWriteArrayList:
+			return true;
+		case CopyOnWriteArraySet:
+			return true;
+		case EnumSet:
+			return true;
+		default:
+			break;
+		}
+		return false;
+	}
+
+	public static Collection<Integer> get(CollectionType collectionType) {
+		switch (collectionType) {
+
 		// Lists
 		case ArrayList:
 			return new ArrayList<Integer>();

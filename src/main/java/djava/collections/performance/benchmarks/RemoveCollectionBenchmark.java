@@ -2,10 +2,8 @@ package djava.collections.performance.benchmarks;
 
 import static djava.collections.performance.CollectionFactory.get;
 
-import java.util.Collection;
-
 import djava.collections.performance.AbstractCollectionBenchmark;
-import djava.collections.performance.Collections;
+import djava.collections.performance.CollectionType;
 
 public class RemoveCollectionBenchmark extends AbstractCollectionBenchmark {
 
@@ -17,12 +15,13 @@ public class RemoveCollectionBenchmark extends AbstractCollectionBenchmark {
 		size4 = 10_0000;
 	}
 
-	public Long operation(Collections collectionType, int collectionSize) {
+	@Override
+	public void beforeOperation(CollectionType collectionType, int collectionSize) {
+		collection = get(collectionType, collectionSize);
+	}
 
-		Collection<Integer> collection = get(collectionType, collectionSize);
-		// =============================================================================
-		Long startTime = System.currentTimeMillis();
-		// =============================================================================
+	@Override
+	public void operation(CollectionType collectionType, int collectionSize) {
 		// ASC
 //		for (int i = 0; i < collectionSize; ++i) {
 //			collection.remove(i);
@@ -31,12 +30,6 @@ public class RemoveCollectionBenchmark extends AbstractCollectionBenchmark {
 		for (int i = collectionSize; i > 0; --i) {
 			collection.remove(i);
 		}
-		// =============================================================================
-		Long endTime = System.currentTimeMillis();
-		// =============================================================================
-
-		return endTime - startTime;
-
 	}
 
 }

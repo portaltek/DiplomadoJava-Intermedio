@@ -2,12 +2,14 @@ package djava.collections.performance;
 
 public interface CollectionBenchmark {
 
-	Long operation(Collections collectionType, int collectionSize);
+	public void beforeOperation(CollectionType collectionType, int collectionSize);
 
-	double executeOperations(Collections collectionType, int collectionSize, int times);
+	public void operation(CollectionType collectionType, int collectionSize);
 
-	void execute(Collections collectionType);
+	public double executeOperations(CollectionType collectionType, int collectionSize, int times);
 
-	void executeAll();
+	public void execute(CollectionType collectionType);
+
+	public void executeAll();
 
 }

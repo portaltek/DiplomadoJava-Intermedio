@@ -1,21 +1,21 @@
 package djava.collections.performance.benchmarks;
 
-import java.util.Collection;
-
 import djava.collections.performance.AbstractCollectionBenchmark;
 import djava.collections.performance.CollectionFactory;
-import djava.collections.performance.Collections;
+import djava.collections.performance.CollectionType;
 
 public class AddCollectionBenchmark extends AbstractCollectionBenchmark {
 
 	@Override
-	public Long operation(Collections collectionType, int collectionSize) {
-		Collection<Integer> collection = CollectionFactory.get(collectionType);
-		Long startTime = System.currentTimeMillis();
+	public void beforeOperation(CollectionType collectionType, int collectionSize) {
+		collection = CollectionFactory.get(collectionType);
+	}
+
+	@Override
+	public void operation(CollectionType collectionType, int collectionSize) {
 		for (int i = 0; i < collectionSize; ++i) {
 			collection.add(i);
 		}
-		Long endTime = System.currentTimeMillis();
-		return endTime - startTime;
 	}
+
 }

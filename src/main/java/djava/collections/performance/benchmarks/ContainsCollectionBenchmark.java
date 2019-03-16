@@ -2,20 +2,19 @@ package djava.collections.performance.benchmarks;
 
 import static djava.collections.performance.CollectionFactory.get;
 
-import java.util.Collection;
-
 import djava.collections.performance.AbstractCollectionBenchmark;
-import djava.collections.performance.Collections;
+import djava.collections.performance.CollectionType;
+
 public class ContainsCollectionBenchmark extends AbstractCollectionBenchmark {
 
-	public Long operation(Collections collectionType, int collectionSize) {
+	@Override
+	public void beforeOperation(CollectionType collectionType, int collectionSize) {
+		collection = get(collectionType, collectionSize);
+	}
 
-		Collection<Integer> collection = get(collectionType, collectionSize);
-		Long startTime = System.currentTimeMillis();
+	@Override
+	public void operation(CollectionType collectionType, int collectionSize) {
 		collection.contains(collectionSize - 1);
-		Long endTime = System.currentTimeMillis();
-		return endTime - startTime;
-
 	}
 
 }

@@ -1,6 +1,6 @@
 package djava.collections.performance;
 
-public enum Collections {
+public enum CollectionType {
 	ArrayList("ArrayList"), Vector("Vector"), LinkedList("LinkedList"), HashSet("HashSet"),
 	LinkedHashSet("LinkedHashSet"), TreeSet("TreeSet"), PriorityQueue("PriorityQueue"), ArrayDeque("ArrayDeque"),
 	ArrayBlockingQueue("ArrayBlockingQueue"), LinkedBlockingQueue("LinkedBlockingQueue"),
@@ -13,7 +13,7 @@ public enum Collections {
 		return this.value;
 	}
 
-	Collections(String value) {
+	CollectionType(String value) {
 		this.value = value;
 	}
 }

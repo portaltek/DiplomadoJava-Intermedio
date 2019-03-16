@@ -12,6 +12,14 @@ import java.util.concurrent.ConcurrentSkipListMap;
 
 public class MapFactory {
 
+	public static Map<Integer, Integer> get(MapType mapType, int size) {
+		Map<Integer, Integer> map = get(mapType);
+		for (int i = 0; i < size; ++i) {
+			map.put(i, i);
+		}
+		return map;
+	}
+
 	public static Map<Integer, Integer> get(MapType mapType) {
 		switch (mapType) {
 		case HashMap:

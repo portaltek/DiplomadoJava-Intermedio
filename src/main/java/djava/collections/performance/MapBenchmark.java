@@ -2,7 +2,9 @@ package djava.collections.performance;
 
 public interface MapBenchmark {
 
-	Long operation(MapType collectionType, int collectionSize);
+	public abstract void beforeOperation(MapType type, int size);
+
+	public abstract void operation(MapType type, int size);
 
 	double executeOperations(MapType collectionType, int collectionSize, int times);
 
