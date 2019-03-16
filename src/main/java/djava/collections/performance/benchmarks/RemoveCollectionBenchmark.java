@@ -20,16 +20,21 @@ public class RemoveCollectionBenchmark extends AbstractCollectionBenchmark {
 	public Long operation(Collections collectionType, int collectionSize) {
 
 		Collection<Integer> collection = get(collectionType, collectionSize);
+		// =============================================================================
 		Long startTime = System.currentTimeMillis();
+		// =============================================================================
 		// ASC
 //		for (int i = 0; i < collectionSize; ++i) {
 //			collection.remove(i);
 //		}
 		// DESC
 		for (int i = collectionSize; i > 0; --i) {
-			collection.remove(i);			
+			collection.remove(i);
 		}
+		// =============================================================================
 		Long endTime = System.currentTimeMillis();
+		// =============================================================================
+
 		return endTime - startTime;
 
 	}

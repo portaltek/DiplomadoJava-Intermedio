@@ -10,6 +10,7 @@ import java.util.PriorityQueue;
 import java.util.TreeSet;
 import java.util.Vector;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -17,7 +18,6 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 public class CollectionFactory {
 
-	
 	public static Collection<Integer> get(Collections collectionType, int collectionSize) {
 		Collection<Integer> collection = get(collectionType);
 		for (int i = 0; i < collectionSize; ++i) {
@@ -25,9 +25,11 @@ public class CollectionFactory {
 		}
 		return collection;
 	}
-	
+
 	public static Collection<Integer> get(Collections collectionType) {
 		switch (collectionType) {
+		
+		// Lists
 		case ArrayList:
 			return new ArrayList<Integer>();
 		case CopyOnWriteArrayList:
@@ -37,6 +39,7 @@ public class CollectionFactory {
 		case LinkedList:
 			return new LinkedList<Integer>();
 
+		// Sets
 		case HashSet:
 			return new HashSet<Integer>();
 		case CopyOnWriteArraySet:
@@ -45,7 +48,12 @@ public class CollectionFactory {
 			return new LinkedHashSet<Integer>();
 		case TreeSet:
 			return new TreeSet<Integer>();
+		case ConcurrentSkipListSet:
+			return new ConcurrentSkipListSet<Integer>();
+//		case EnumSet:
+//			return new EnumSet<Integer>();
 
+		// Queue
 		case PriorityQueue:
 			return new PriorityQueue<Integer>();
 		case PriorityBlockingQueue:
@@ -57,6 +65,8 @@ public class CollectionFactory {
 			return new ArrayBlockingQueue<Integer>(1000_000);
 		case LinkedBlockingQueue:
 			return new LinkedBlockingQueue<Integer>(1000_000);
+		default:
+			break;
 		}
 
 		return null;
