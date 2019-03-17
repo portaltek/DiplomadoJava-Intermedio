@@ -1,16 +1,16 @@
 package djava.collections.performance;
 
 import djava.collections.performance.CollectionBenchmark;
-import djava.collections.performance.CollectionType.*;
 import djava.collections.performance.MapBenchmark;
-import djava.collections.performance.benchmarks.AddCollectionBenchmark;
-import djava.collections.performance.benchmarks.ContainsCollectionBenchmark;
-import djava.collections.performance.benchmarks.IterateCollectionBenchmark;
-import djava.collections.performance.benchmarks.RemoveCollectionBenchmark;
-import djava.collections.performance.benchmarks.map.AddMapBenchmark;
-import djava.collections.performance.benchmarks.map.GetMapBenchmark;
-import djava.collections.performance.benchmarks.map.IterateMapBenchmark;
-import djava.collections.performance.benchmarks.map.RemoveMapBenchmark;
+import djava.collections.performance.collectionbenchmarks.AddCollectionBenchmark;
+import djava.collections.performance.collectionbenchmarks.ContainsCollectionBenchmark;
+import djava.collections.performance.collectionbenchmarks.IterateCollectionBenchmark;
+import djava.collections.performance.collectionbenchmarks.RemoveCollectionBenchmark;
+import djava.collections.performance.mapbenchmarks.AddMapBenchmark;
+import djava.collections.performance.mapbenchmarks.GetMapBenchmark;
+import djava.collections.performance.mapbenchmarks.IterateMapBenchmark;
+import djava.collections.performance.mapbenchmarks.RemoveMapBenchmark;
+import djava.collections.util.CollectionType.*;
 
 public class CollectionMapPerformance {
 	

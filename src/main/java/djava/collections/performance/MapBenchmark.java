@@ -1,5 +1,7 @@
 package djava.collections.performance;
 
+import djava.collections.util.MapType;
+
 public interface MapBenchmark {
 
 	public abstract void beforeOperation(MapType type, int size);

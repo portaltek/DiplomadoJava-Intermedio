@@ -1,11 +1,11 @@
-package djava.collections.performance.benchmarks.map;
+package djava.collections.performance.mapbenchmarks;
 
-import static djava.collections.performance.MapFactory.get;
+import static djava.collections.util.MapFactory.get;
 
 import java.util.Map.Entry;
 
 import djava.collections.performance.AbstractMapBenchmark;
-import djava.collections.performance.MapType;
+import djava.collections.util.MapType;
 
 public class IterateMapBenchmark extends AbstractMapBenchmark {
 

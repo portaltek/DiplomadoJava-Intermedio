@@ -1,4 +1,4 @@
-package djava.collections.performance;
+package djava.collections.util;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

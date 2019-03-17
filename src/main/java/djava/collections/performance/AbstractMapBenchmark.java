@@ -2,6 +2,8 @@ package djava.collections.performance;
 
 import java.util.Map;
 
+import djava.collections.util.MapType;
+
 public abstract class AbstractMapBenchmark implements MapBenchmark {
 
 	protected int times = 50;
@@ -42,7 +44,6 @@ public abstract class AbstractMapBenchmark implements MapBenchmark {
 	public void executeAll() {
 		MapType[] maps = MapType.values();
 		for (MapType c : maps) {
-			
 			execute(c);
 		}
 		System.out.println("END");

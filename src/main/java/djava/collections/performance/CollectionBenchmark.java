@@ -1,5 +1,7 @@
 package djava.collections.performance;
 
+import djava.collections.util.CollectionType;
+
 public interface CollectionBenchmark {
 
 	public void beforeOperation(CollectionType collectionType, int collectionSize);

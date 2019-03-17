@@ -1,9 +1,9 @@
-package djava.collections.performance.benchmarks.map;
+package djava.collections.performance.mapbenchmarks;
 
-import static djava.collections.performance.MapFactory.get;
+import static djava.collections.util.MapFactory.get;
 
 import djava.collections.performance.AbstractMapBenchmark;
-import djava.collections.performance.MapType;
+import djava.collections.util.MapType;
 
 public class RemoveMapBenchmark extends AbstractMapBenchmark {
 

@@ -1,8 +1,8 @@
-package djava.collections.performance.benchmarks;
+package djava.collections.performance.collectionbenchmarks;
 
 import djava.collections.performance.AbstractCollectionBenchmark;
-import djava.collections.performance.CollectionFactory;
-import djava.collections.performance.CollectionType;
+import djava.collections.util.CollectionFactory;
+import djava.collections.util.CollectionType;
 
 public class AddCollectionBenchmark extends AbstractCollectionBenchmark {
 

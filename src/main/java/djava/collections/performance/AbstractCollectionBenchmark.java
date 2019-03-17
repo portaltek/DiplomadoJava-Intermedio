@@ -2,11 +2,11 @@ package djava.collections.performance;
 
 
 
-import static djava.collections.performance.CollectionFactory.skip;
+import static djava.collections.util.CollectionFactory.skip;
 
 import java.util.Collection;
 
-import djava.collections.performance.CollectionType;
+import djava.collections.util.CollectionType;
 
 public abstract class AbstractCollectionBenchmark implements CollectionBenchmark {
 

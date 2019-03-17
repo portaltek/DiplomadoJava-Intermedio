@@ -1,4 +1,4 @@
-package djava.collections.performance;
+package djava.collections.util;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -18,6 +18,36 @@ public class MapFactory {
 			map.put(i, i);
 		}
 		return map;
+	}
+
+	public static boolean allowsNullKey(MapType mapType) {
+		switch (mapType) {
+		case TreeMap:
+			return false;
+		case Hashtable:
+			return false;
+		case ConcurrentHashMap:
+			return false;
+		case ConcurrentSkipListMap:
+			return false;
+		default:
+			break;
+		}
+		return true;
+	}
+
+	public static boolean allowsNullValue(MapType mapType) {
+		switch (mapType) {
+		case Hashtable:
+			return false;
+		case ConcurrentHashMap:
+			return false;
+		case ConcurrentSkipListMap:
+			return false;
+		default:
+			break;
+		}
+		return true;
 	}
 
 	public static Map<Integer, Integer> get(MapType mapType) {

@@ -1,4 +1,4 @@
-package djava.collections.performance;
+package djava.collections.util;
 
 public enum CollectionType {
 	ArrayList("ArrayList"), Vector("Vector"), LinkedList("LinkedList"), HashSet("HashSet"),

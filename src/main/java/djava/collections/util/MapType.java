@@ -1,4 +1,4 @@
-package djava.collections.performance;
+package djava.collections.util;
 
 public enum MapType {
 	HashMap("HashMap"), LinkedHashMap("LinkedHashMap"), TreeMap("TreeMap"), IdentityHashMap("IdentityHashMap"),
