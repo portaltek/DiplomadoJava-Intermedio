@@ -1,4 +1,4 @@
-package djava.collections;
+package djava.collections.util;
 
 import java.util.Collection;
 import java.util.Map;

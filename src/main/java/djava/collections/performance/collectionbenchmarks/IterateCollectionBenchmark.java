@@ -14,6 +14,7 @@ public class IterateCollectionBenchmark extends AbstractCollectionBenchmark {
 		collection = get(collectionType, collectionSize);
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void operation(CollectionType collectionType, int collectionSize) {
 		for (Iterator<Integer> iterator = collection.iterator(); iterator.hasNext();) {
