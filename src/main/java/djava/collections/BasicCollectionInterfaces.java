@@ -1,4 +1,4 @@
-package djava.collections.basicCollectionInterfaces;
+package djava.collections;
 
 import java.util.ArrayList;
 import java.util.Collection;

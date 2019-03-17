@@ -1,5 +1,7 @@
-package djava.collections.performance;
+package djava.collections;
 
+import djava.collections.performance.CollectionBenchmark;
+import djava.collections.performance.MapBenchmark;
 import djava.collections.performance.collectionbenchmarks.AddCollectionBenchmark;
 import djava.collections.performance.collectionbenchmarks.ContainsCollectionBenchmark;
 import djava.collections.performance.collectionbenchmarks.IterateCollectionBenchmark;
@@ -10,7 +12,7 @@ import djava.collections.performance.mapbenchmarks.IterateMapBenchmark;
 import djava.collections.performance.mapbenchmarks.RemoveMapBenchmark;
 
 @SuppressWarnings("unused")
-public class CollectionMapPerformance {
+public class CollectionAndMapPerformance {
 	
 	
 	private static CollectionBenchmark addCB = new AddCollectionBenchmark();

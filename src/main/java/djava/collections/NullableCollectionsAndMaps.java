@@ -1,4 +1,4 @@
-package djava.collections.basicCollectionInterfaces;
+package djava.collections;
 
 import static djava.collections.util.MapFactory.allowsNullKey;
 import static djava.collections.util.MapFactory.allowsNullValue;
