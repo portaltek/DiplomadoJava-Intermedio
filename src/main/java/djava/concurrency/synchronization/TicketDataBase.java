@@ -24,7 +24,7 @@ public class TicketDataBase {
 	public Ticket sell(String seller, String buyer) throws InterruptedException {
 		for (Ticket ticket : ticketList) {
 			if ("available".equals(ticket.getStatus())) {
-				// Thread.sleep(100);
+				//Thread.sleep(10); //Simulating time to query actual database.
 				ticket.setStatus("sold");
 				ticket.setSeller(seller);
 				ticket.setBuyer(buyer);

@@ -34,9 +34,9 @@ public class CreatingThreads {
 		SellerThreadClass seller3 = new SellerThreadClass(db, "Seller3", salesGoal);
 
 		seller1.start();
-		// thread1.join(); //To join child thread into main/parent thread.
 		seller2.start();
 		seller3.start();
+
 
 	}
 
