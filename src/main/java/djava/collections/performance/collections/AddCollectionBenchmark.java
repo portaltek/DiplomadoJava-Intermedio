@@ -1,20 +1,21 @@
-package djava.collections.performance.collectionbenchmarks;
-
-import static djava.collections.util.CollectionFactory.get;
+package djava.collections.performance.collections;
 
 import djava.collections.performance.AbstractCollectionBenchmark;
+import djava.collections.util.CollectionFactory;
 import djava.collections.util.CollectionType;
 
-public class ContainsCollectionBenchmark extends AbstractCollectionBenchmark {
+public class AddCollectionBenchmark extends AbstractCollectionBenchmark {
 
 	@Override
 	public void beforeOperation(CollectionType collectionType, int collectionSize) {
-		collection = get(collectionType, collectionSize);
+		collection = CollectionFactory.get(collectionType);
 	}
 
 	@Override
 	public void operation(CollectionType collectionType, int collectionSize) {
-		collection.contains(collectionSize - 1);
+		for (int i = 0; i < collectionSize; ++i) {
+			collection.add(i);
+		}
 	}
 
 }

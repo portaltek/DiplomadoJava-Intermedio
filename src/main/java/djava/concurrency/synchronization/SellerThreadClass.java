@@ -17,9 +17,10 @@ public class SellerThreadClass extends Thread {
 		for (int i = 0; i < salesGoal; i++) {
 			try {
 				// Ticket ticket = nonSync(i);
-				Ticket ticket = syncMethod(i);
-//				Ticket ticket = syncBlock(i);
+//				Ticket ticket = syncMethod(i);
+				Ticket ticket = syncBlock(i);
 				if (ticket != null) {
+					Thread.sleep(10); //Simulating PROCESSING time AFTER querying database.
 					System.out.println("Ticket sold by " + seller + ": " + ticket);
 				}
 			} catch (InterruptedException e) {

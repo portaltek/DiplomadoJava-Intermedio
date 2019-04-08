@@ -1,4 +1,4 @@
-package djava.collections.performance.collectionbenchmarks;
+package djava.collections.performance.collections;
 
 import static djava.collections.util.CollectionFactory.get;
 

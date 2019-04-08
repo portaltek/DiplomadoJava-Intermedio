@@ -1,4 +1,4 @@
-package djava.collections.performance.mapbenchmarks;
+package djava.collections.performance.maps;
 
 import static djava.collections.util.MapFactory.get;
 

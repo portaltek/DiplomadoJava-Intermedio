@@ -2,14 +2,14 @@ package djava.collections;
 
 import djava.collections.performance.CollectionBenchmark;
 import djava.collections.performance.MapBenchmark;
-import djava.collections.performance.collectionbenchmarks.AddCollectionBenchmark;
-import djava.collections.performance.collectionbenchmarks.ContainsCollectionBenchmark;
-import djava.collections.performance.collectionbenchmarks.IterateCollectionBenchmark;
-import djava.collections.performance.collectionbenchmarks.RemoveCollectionBenchmark;
-import djava.collections.performance.mapbenchmarks.AddMapBenchmark;
-import djava.collections.performance.mapbenchmarks.GetMapBenchmark;
-import djava.collections.performance.mapbenchmarks.IterateMapBenchmark;
-import djava.collections.performance.mapbenchmarks.RemoveMapBenchmark;
+import djava.collections.performance.collections.AddCollectionBenchmark;
+import djava.collections.performance.collections.ContainsCollectionBenchmark;
+import djava.collections.performance.collections.IterateCollectionBenchmark;
+import djava.collections.performance.collections.RemoveCollectionBenchmark;
+import djava.collections.performance.maps.AddMapBenchmark;
+import djava.collections.performance.maps.GetMapBenchmark;
+import djava.collections.performance.maps.IterateMapBenchmark;
+import djava.collections.performance.maps.RemoveMapBenchmark;
 
 @SuppressWarnings("unused")
 public class CollectionAndMapPerformance {
